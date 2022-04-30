@@ -1,5 +1,5 @@
 # NAS-RRC
-SDAp is unique for User-Plane Protocol Stack . Similarly RRC and NAS are unique to Control-Plane Protocol Stack. They are responsible for connection set up, mobility and security related functions.
+SDAP is unique for User-Plane Protocol Stack . Similarly RRC and NAS are unique to Control-Plane Protocol Stack. They are responsible for connection set up, mobility and security related functions.
 
 **NAS(UE-AMF)**<br />
 NAS function operate between AMF in core network and the device. It includes following functions NAS(Non-Access Stratum):-<br />

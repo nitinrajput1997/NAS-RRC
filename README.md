@@ -41,3 +41,11 @@ An identity is used for the devices for signalling purposes between the device a
 Everytime the device goes from RRC IDLE to Connected, there is lots of control signalling. Since, often time the amount of data sent is quite small and to have all that control signals just for sending a small amount of data is not very effiecient.
 
 For this purpose, a new state is introduced in NR known as **RRC Inactive**
+
+A procedure called RRC-Suspended is used to go from connected to inactive state and RRC-Resume is used to go from inactive state to connected state.
+
+**RRC Inactive**state , the entire RRC context is stored both in the devices and the gNB. Hence the transition from connected to inactive state is quite fast.
+
+There is no need for any core network signalling . Since the RRC context is already is place in the network. The transitionfrom inactive to connected can happen entirely in RAN. At the same time, the device is allowed to go to sleep in a simialr way as in iDLE SATE.
+
+So, it provide the energy saving beenefit of idle state , but also readiness to go into the connected state veryeasily without much control signal overhead. This state provide good trade-off between performance and energy efficiency.

@@ -30,5 +30,14 @@ The necessary parameter that are esrablished as apart of connection preocedure, 
 
 No data transfer take place because the device just sleeps most of the time to reduce the batter consumption in this state. It periodically wakes up to receive paging information if there is any paging information from the network. If there is any uplink data to be sent from device then the device has to do the random access procrdure to get the UL-Synchronization scheduling.
 
-This will leads the device from **RRC Idle to RRc Connected** State.
+This will leads the device from **RRC Idle to RRC Connected** State.
 
+As a part of moving from idle to connected state, the RRC context is established in both the device/UE and network. In **RRC Connected** mode, the context is established and all the parameter necessary for commub=nication between the UE and RAN are known to both UE and network.
+
+In this case the device is explicitly belongs to a cell and cell to which devices is belong, is known to the network.
+
+An identity is used for the devices for signalling purposes between the device and network.  The connected state intended for data transfer to and from device.
+
+Everytime the device goes from RRC IDLE to Connected, there is lots of control signalling. Since, often time the amount of data sent is quite small and to have all that control signals just for sending a small amount of data is not very effiecient.
+
+For this purpose, a new state is introduced in NR known as **RRC Inactive**
